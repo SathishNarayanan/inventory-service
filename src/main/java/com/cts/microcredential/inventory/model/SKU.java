@@ -1,0 +1,46 @@
+package com.cts.microcredential.inventory.model;
+
+import lombok.*;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "sku")
+@Entity
+@ToString
+@EqualsAndHashCode
+public class SKU implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    private String sku;
+
+    private String name;
+
+    private String category_id;
+
+    private String subCategory_id;
+
+    private String brand;
+
+    private Long quantity;
+
+    private String isOutOfStock;
+
+    private String create_user;
+
+    private String create_tsamp;
+
+    private String modify_user;
+
+    private String modify_tstamp;
+
+
+}
